@@ -1,9 +1,9 @@
 <?php
 
-$dbhost = "";
+$dbhost = "starttooldev01.mysql.database.azure.com";
 $dbname = "startdb";
-$dbuser = "startconnect";
-$dbpass ="";
+$dbuser = "srtadmin01";
+$dbpass ="Ugw6h1daE5";
 
 
 $link = @mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
