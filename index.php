@@ -2,7 +2,7 @@
  include_once("config.php");
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-
+echo"Connection Started";
 $encrypted=$_POST['d1']; 
 $password = '8R@13#s34Af';
 $method = 'aes-256-cbc';
@@ -14,6 +14,7 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 
 //decrypt
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
+	echo $decrypted;
  $arraydata = explode("," ,$decrypted);
     $arr=array();
     $i=0;
