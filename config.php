@@ -3,7 +3,7 @@ $dbhost = "starttooldev01.mysql.database.azure.com";
 $dbname = "startdb";
 $dbuser = "srtadmin01";
 $dbpass ="Ugw6h1daE5";
-
+echo"conect database";
 //$conn = mysqli_init();
 //mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 //mysqli_real_connect($conn, 'starttooldev01.mysql.database.azure.com', 'srtadmin01', 'Ugw6h1daE5', 'startdb', 3306);
