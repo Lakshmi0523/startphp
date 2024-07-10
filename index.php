@@ -39,9 +39,9 @@ else
 $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";
        //echo "$Sql_Query" ;
  try {
-             $result = mysqli_query($link,$Sql_Query);
+             $result = mysqli_real_query($link,$Sql_Query);
              if (!$result) {
-                 throw new Exception(mysqli_error($link));
+                 throw new Exception(mysqli_real_error($link));
              }
              else {
                 echo"record inserted";
@@ -50,7 +50,7 @@ $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'
              error_log($e->getMessage());
          }
 }
-         mysqli_close($link);	
+         mysqli_real_close($link);	
          
  }
  ?>
