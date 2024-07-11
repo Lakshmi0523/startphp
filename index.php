@@ -1,8 +1,6 @@
 <?php
  include_once("config.php");
-echo " data";
 if($_SERVER['REQUEST_METHOD']=='POST'){
-echo "post metnod";
 $encrypted=$_POST['d1']; 
 $password = '8R@13#s34Af';
 $method = 'aes-256-cbc';
@@ -35,7 +33,7 @@ else
         
 	}
 $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";
-       echo "$Sql_Query" ;
+       //echo "$Sql_Query" ;
  try {
              $result = mysqli_query($conn,$Sql_Query);
              if (!$result) {
