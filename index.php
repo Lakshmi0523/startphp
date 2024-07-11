@@ -1,6 +1,6 @@
  <?php
 echo"Started";
-/*include_once("config.php");
+include_once("config.php");
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
 echo"Connection Started";
@@ -52,6 +52,6 @@ $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'
 }
          mysqli_close($link);	
          
- }*/
+ }
  ?>
  
