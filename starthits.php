@@ -27,7 +27,7 @@ $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPEN
 
 if(strlen($decrypted)==0)
 {
-echo "please insert proper data";
+echo "lets insert the data records";
 }
 else
 {
