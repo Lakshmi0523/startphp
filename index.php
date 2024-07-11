@@ -1,6 +1,6 @@
  <?php
 echo"Started";
-/* include_once("config.php");
+include_once("config.php");
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
 echo"Connection Started";
@@ -37,9 +37,9 @@ else
         
 	}
 $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";
-       //echo "$Sql_Query" ;
+       echo "$Sql_Query" ;
  try {
-             $result = mysqli_query(mysqli $link,string $Sql_Query);
+             $result = mysqli_query($link, $Sql_Query);
              if (!$result) {
                  throw new Exception(mysqli_error($link));
              }
@@ -52,6 +52,6 @@ $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'
 }
          mysqli_close($link);	
          
- }*/
+ }
  ?>
  
