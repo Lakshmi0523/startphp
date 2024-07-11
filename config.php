@@ -33,7 +33,7 @@ if (!$conn) {
 }
 
 // Set SSL options
-mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
+//mysqli_ssl_set($conn, NULL, NULL, NULL, NULL, NULL);
 
 // Establish a connection
 $connected = mysqli_real_connect(
