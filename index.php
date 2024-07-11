@@ -1,9 +1,10 @@
- <?php
-echo"Started";
-include_once("config.php");
-
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
+ include_once("config.php");
+echo " data";
 if($_SERVER['REQUEST_METHOD']=='POST'){
-echo"Connection Started";
+echo "post metnod";
 $encrypted=$_POST['d1']; 
 $password = '8R@13#s34Af';
 $method = 'aes-256-cbc';
@@ -15,7 +16,6 @@ $iv = chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0) . chr(0x0)
 
 //decrypt
 $decrypted = openssl_decrypt(base64_decode($encrypted), $method, $password, OPENSSL_RAW_DATA, $iv);
-echo $decrypted;
  $arraydata = explode("," ,$decrypted);
     $arr=array();
     $i=0;
@@ -39,7 +39,7 @@ else
 $Sql_Query = "INSERT INTO start_hits (hit_date,user_name,version) values(now(),'".$arr[0]."','".$arr[1]."')";
        echo "$Sql_Query" ;
  try {
-             $result = mysqli_query($link, $Sql_Query);
+             $result = mysqli_query($link,$Sql_Query);
              if (!$result) {
                  throw new Exception(mysqli_error($link));
              }
