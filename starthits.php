@@ -44,7 +44,7 @@ else
                  throw new Exception(mysqli_error($link));
              }
              else {
-                echo"record inserted";
+                echo"record insert";
              }
          } catch (Exception $e) {
              error_log($e->getMessage());
