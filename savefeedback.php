@@ -48,7 +48,7 @@ if(strlen($arr[7])==0){
     $arr[7]='1.3';
 }
 $Sql_Query = "INSERT INTO feedback (user_name ,location,category,sub_category,rating,comments,resolved,created_date,version) values('".$arr[0]."','".$arr[6]."','".$catarr[$i]."','".$subarr[$i]."','".$arr[3]."','".$arr[4]."','".$arr[5]."',now(), '".$arr[7]."')";
-echo "$Sql_Query" ;      
+//echo "$Sql_Query" ;      
  
 
 if(strlen($encrypted)>37){
